@@ -9,8 +9,7 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      /* 夜祭藍漸層背景 */
-      background: linear-gradient(180deg, #0D1B2A, #1B263B, #415A77);
+      background: linear-gradient(180deg, #0B1E3F 0%, #123765 50%, #1F4E78 100%); /* 深藍漸層背景 */
       font-family: "Noto Sans TC", sans-serif;
       display: flex;
       justify-content: center;
@@ -21,20 +20,20 @@
     .player-container {
       max-width: 500px;
       width: 90%;
-      background: rgba(255, 255, 255, 0.95);
-      padding: 25px;
+      background: rgba(255, 255, 255, 0.95); /* 白色半透明 */
+      padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
       text-align: center;
-      border: 3px solid #FF2E2E; /* 紅白祭典邊框 */
+      border: 4px solid #E63946; /* 日本紅燈籠色 */
     }
 
     h1 {
-      color: #133B5C;
+      color: #0B1E3F;
       font-size: 30px;
       margin-bottom: 20px;
       font-weight: 700;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
     }
 
     #start-button {
@@ -58,28 +57,28 @@
     .brand-message {
       margin-top: 20px;
       font-size: 16px;
-      color: #0D1B2A;
+      color: #0B1E3F;
       font-weight: 500;
     }
 
-    /* 小燈籠點綴 */
-    body::before {
-      content: "🎐";
+    /* 頂部燈籠 */
+    .lanterns {
       position: fixed;
-      top: 20px;
-      left: 20px;
-      font-size: 40px;
-    }
-    body::after {
-      content: "🏮";
-      position: fixed;
-      top: 20px;
-      right: 20px;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
       font-size: 40px;
     }
   </style>
 </head>
 <body>
+  <!-- 燈籠emoji裝飾 -->
+  <div class="lanterns">
+    🏮 🎐 🏮 🎐 🏮
+  </div>
+
   <div class="player-container">
     <h1>Choubo Kissaten 夏祭音樂時光</h1>
     <button id="start-button">▶️ 播放音樂</button>
