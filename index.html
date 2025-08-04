@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Choubo Kissaten 音樂時光</title>
+  <title>Choubo Kissaten 夏祭音樂時光</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      background: #FFF8E7; /* 淡米色背景，更純樸 */
+      /* 夜祭藍漸層背景 */
+      background: linear-gradient(180deg, #0D1B2A, #1B263B, #415A77);
       font-family: "Noto Sans TC", sans-serif;
       display: flex;
       justify-content: center;
@@ -20,46 +21,70 @@
     .player-container {
       max-width: 500px;
       width: 90%;
-      background: #ffffff;
+      background: rgba(255, 255, 255, 0.95);
       padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
       text-align: center;
+      border: 3px solid #FF2E2E; /* 紅白祭典邊框 */
     }
 
     h1 {
-      color: #6B4226;
-      font-size: 28px;
+      color: #133B5C;
+      font-size: 30px;
       margin-bottom: 20px;
+      font-weight: 700;
+      letter-spacing: 2px;
     }
 
     #start-button {
-      background-color: #A67C52;
+      background-color: #1E6091;
       border: none;
       color: white;
-      padding: 12px 24px;
+      padding: 14px 28px;
       font-size: 18px;
-      border-radius: 6px;
+      font-weight: bold;
+      border-radius: 8px;
       cursor: pointer;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+      transition: 0.3s;
     }
 
     #start-button:hover {
-      background-color: #8B5E3C;
+      background-color: #144E75;
+      transform: scale(1.05);
     }
 
     .brand-message {
       margin-top: 20px;
       font-size: 16px;
-      color: #7A5521;
+      color: #0D1B2A;
+      font-weight: 500;
+    }
+
+    /* 小燈籠點綴 */
+    body::before {
+      content: "🎐";
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 40px;
+    }
+    body::after {
+      content: "🏮";
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 40px;
     }
   </style>
 </head>
 <body>
   <div class="player-container">
-    <h1>Choubo Kissaten 音樂時光</h1>
+    <h1>Choubo Kissaten 夏祭音樂時光</h1>
     <button id="start-button">▶️ 播放音樂</button>
     <div class="brand-message">
-      靜靜聽，讓音樂陪伴 Choubo Kissaten 的每一刻。
+      在夏夜藍天下，與 Choubo Kissaten 一起聽見日本祭典的旋律。
     </div>
   </div>
 
